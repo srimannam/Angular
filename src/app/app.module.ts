@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routemod } from './app.route';
 
 import { AppComponent } from './app.component';
 import { DisplayareaComponent } from './components/displayarea/displayarea.component';
@@ -12,6 +13,8 @@ import { VclassesComponent } from './routes/vclasses/vclasses.component';
 import { OfficesComponent } from './routes/offices/offices.component';
 import { EbooksComponent } from './routes/ebooks/ebooks.component';
 import { ReviewsComponent } from './routes/reviews/reviews.component';
+import { CourselistComponent } from './routes/home/courselist/courselist.component';
+import { CourseComponent } from './routes/home/course/course.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +28,13 @@ import { ReviewsComponent } from './routes/reviews/reviews.component';
     VclassesComponent,
     OfficesComponent,
     EbooksComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    CourselistComponent,
+    CourseComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    Routemod
   ],
   providers: [],
   bootstrap: [AppComponent]
