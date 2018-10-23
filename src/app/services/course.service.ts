@@ -50,7 +50,7 @@ export class CourseService {
         name: "Python",
         description: "Dropbox uses python",
         price: 66000,
-        image: "Python.png"
+        image: "Python.jpg"
       },
       {
         name: "React",
