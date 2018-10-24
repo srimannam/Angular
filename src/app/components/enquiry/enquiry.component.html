@@ -1,0 +1,31 @@
+<ng-container *ngIf="active;then form;else sending">
+  
+  </ng-container>
+  
+  <ng-template #form>
+    <div class="form">
+      <h3>Course Enquiry Form</h3>
+       <label for="name">Name</label> <br>
+       <input type="text" [(ngModel)]="name"> <br>
+       <label for="email">Email</label> <br>
+       <input type="text" [(ngModel)]="email"> <br>
+       <label for="message">Message</label> <br>
+       <textarea [(ngModel)]="message" cols="30" rows="10"></textarea><br>
+       <button class="btn btn-primary" (click)="handleClick()">Send Enquiry</button>
+       <div class="errors" *ngIf="errors.length>0">
+         <ul>
+           <li *ngFor="let x of errors">
+             {{x}}
+           </li>
+         </ul>
+       </div>
+    </div>
+  </ng-template>
+  
+  <ng-template #sending>
+      <div class="form">
+          <img src="../../../assets/Images/{{image}}" height="200" width="200">
+      </div>
+  </ng-template>
+  
+  
