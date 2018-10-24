@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routemod } from './app.route';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { DisplayareaComponent } from './components/displayarea/displayarea.component';
@@ -15,6 +17,10 @@ import { EbooksComponent } from './routes/ebooks/ebooks.component';
 import { ReviewsComponent } from './routes/reviews/reviews.component';
 import { CourselistComponent } from './routes/home/courselist/courselist.component';
 import { CourseComponent } from './routes/home/course/course.component';
+import { DiscountPipe } from './pipes/discount.pipe';
+import { FormatpricePipe } from './pipes/formatprice.pipe';
+import { FiltercoursePipe } from './pipes/filtercourse.pipe';
+import { ReviewComponent } from './routes/reviews/review/review.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +36,17 @@ import { CourseComponent } from './routes/home/course/course.component';
     EbooksComponent,
     ReviewsComponent,
     CourselistComponent,
-    CourseComponent
+    CourseComponent,
+    DiscountPipe,
+    FormatpricePipe,
+    FiltercoursePipe,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
-    Routemod
+    Routemod,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
