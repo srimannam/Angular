@@ -6,6 +6,7 @@ import { EbooksComponent } from './routes/ebooks/ebooks.component';
 import { ReviewsComponent } from './routes/reviews/reviews.component';
 import { RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
+import { CoursedetailsComponent } from './components/coursedetails/coursedetails.component';
 
 const routes = [
     {path:"",component:HomeComponent},
@@ -14,6 +15,7 @@ const routes = [
     {path:"offices",component:OfficesComponent},
     {path:"ebooks",component:EbooksComponent},
     {path:"vclasses",component:VclassesComponent},
+    {path:"CDetails/:ccode",component:CoursedetailsComponent},
 ];
 
 export const Routemod:ModuleWithProviders = RouterModule.forRoot(routes);
