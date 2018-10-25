@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EnquiryService {
 
+  isOffer:boolean = true;
   httpOptions;
 
   constructor(private http:HttpClient) { 
